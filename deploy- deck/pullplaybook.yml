@@ -1,8 +1,0 @@
----
-- name: Pull docker image of sajal12/junit-devops
-  hosts: all
-  tasks:
-    - name: Pull sajal12/junit-devops image
-      docker_image:
-        name: sajal12/junit-devops
-        source: pull
