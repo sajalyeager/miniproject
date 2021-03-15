@@ -4,5 +4,5 @@
   tasks:
     - name: Pull sajal12/junit-devops image
       docker_image:
-        name: sajal12/junit-devops
+        name: sajal12/junit-devops-1
         source: pull
