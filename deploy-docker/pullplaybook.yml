@@ -3,6 +3,6 @@
   hosts: all
   tasks:
     - name: Pull sajal12/junit-devops image
-      docker_image:
-        name: sajal12/junit-devops
+      docker_imag
+        name: sajal12/junit-devops-1
         source: pull
