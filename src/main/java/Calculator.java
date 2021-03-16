@@ -1,11 +1,18 @@
 import java.util.Scanner;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class Calculator {
-    static double squareRoot(double n) { // function to find the square root of a number
+    private static final Logger logger = LogManager.getLogger(Calculator.class);
+    static double squareRoot(double n)
+    { // function to find the square root of a number
+        logger.info("Square root operation for value "+ n);
         return Math.sqrt(n);
     }
 
-    static double factorial(double n) { // function to find the factorial of a number
+    static double factorial(double n) {
+        logger.info("Factorial operation for value "+ n);
+        // function to find the factorial of a number
         try { // for handling the case when we pass a negative number as input
             if (n < 0)
                 throw new ArithmeticException(); // throwing the Arithmetic Exception
@@ -20,10 +27,12 @@ public class Calculator {
     }
 
     static double logarithm(double n) { // function to find the log base e value of a number
+        logger.info("Natural Logarithm operation for value "+ n);
         return Math.log(n);
     }
 
     static double power(double X, double b) { // function to find X power b
+        logger.info("Power operation for base as " + X + " and exponent as "+ b);
         return Math.pow(X, b);
     }
 
@@ -75,6 +84,7 @@ public class Calculator {
                     break;
 
                 default:
+                    logger.warn("Invalid choice!!");
                     System.out.println("invalid choice... try again...");
             }
 
